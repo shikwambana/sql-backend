@@ -3,7 +3,7 @@ INSERT INTO person_wedding
    [id]
    , [LastName]
    , [FirstName]
-   , [dateOfBirthh]
+   , [dateOfBirth]
    , [weddingID]
    , [gender]
    , [status]
@@ -13,7 +13,7 @@ VALUES
    @id
    , @LastName
    , @FirstName
-   , @dateOfBirthh
+   , @dateOfBirth
    , @weddingID
    , @gender
    , @status

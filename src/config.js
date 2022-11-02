@@ -20,7 +20,7 @@ const { PORT,
    OKTA_CLIENT_SECRET
 } = process.env;
 
-const sqlEncrypt = process.env.SQL_ENCRYPT === "true";
+const sqlEncrypt = process.env.SQL_ENCRYPT === "false";
 
 // validate the required configuration information
 assert( PORT, "PORT configuration is required." );

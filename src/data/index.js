@@ -33,9 +33,10 @@ const client = async (server, config) => {
 
                 return pool;
             }
-
+           
+            // pool = new sql.ConnectionPool(config)
             // create a new connection pool
-            pool = await sql.connect(config);
+            pool = await new sql.connect(config);
 
             // catch any connection errors and close the pool
             pool.on("error", async err => {
@@ -43,14 +44,14 @@ const client = async (server, config) => {
                 server.log(["error", "data"], err);
                 await closePool();
             });
-            console.log('pool',pool)
+            // console.log('pool',pool)
             return pool;
 
         } catch (err) {
             // error connecting to SQL Server
             server.log(["error", "data"], "error connecting to sql server");
             server.log(["error", "data"], err);
-            console.log("error", err);
+            // console.log("error", err);
             pool = null;
         }
     };
